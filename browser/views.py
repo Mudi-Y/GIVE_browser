@@ -20,8 +20,8 @@ def home(request):
 def data(request):
     return render(request,'browser/data.html',{'title':'Data'})
 
-def find(request):
-    return render(request,'browser/find.html',{'title':'Find LD SNPs'})
+# def find(request):
+#     return render(request,'browser/find.html',{'title':'Find LD SNPs'})
 
 def contact(request):
     return render(request,'browser/contact.html',{'title':'Contact'})
@@ -152,6 +152,7 @@ def addViz(request):
     return HttpResponse(status=204)
 
 
+# delete according to database records, cannot remove dirty files
 def delete(request):
     tracks = Track.objects.filter(public=False)
     if tracks:
@@ -166,6 +167,7 @@ def delete(request):
     return HttpResponse("<h1>DELETED!<h1>")
 
 
+# reset to the original clean status, will delete dirty files
 def reset(request):
     editor = ManageGiveData()
     editor.reset()
@@ -186,7 +188,7 @@ def reset(request):
 
     return HttpResponse("<h1>RESET!<h1>")
 
-
+# file download for data tab
 def file_down(request,id):
     files = {
         '0':'GWAS.csv',

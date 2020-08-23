@@ -32,6 +32,7 @@ ALLOWED_HOSTS = ['sc.gersteinlab.org','*']
 
 INSTALLED_APPS = [
     'browser.apps.BrowserConfig',
+    'gwasdb.apps.GwasdbConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -81,7 +82,16 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-    }
+    },
+    'gwas': {
+            'ENGINE': 'django.db.backends.mysql',
+            'NAME': os.environ['gwas'],
+            'USER': os.environ['my383'],
+            'PASSWORD': os.environ['GWAS_Site'],
+            'HOST': os.environ['localhost'],
+            'PORT': os.environ['3306'],
+            'OPTIONS':{'charset': 'utf8mb4',}
+        },
 }
 
 
