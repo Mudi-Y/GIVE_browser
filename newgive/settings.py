@@ -85,12 +85,12 @@ DATABASES = {
     },
     'gwas': {
             'ENGINE': 'django.db.backends.mysql',
-            'NAME': os.environ['gwas'],
-            'USER': os.environ['my383'],
-            'PASSWORD': os.environ['GWAS_Site'],
-            'HOST': os.environ['localhost'],
-            'PORT': os.environ['3306'],
-            'OPTIONS':{'charset': 'utf8mb4',}
+            'NAME': 'gwas',
+            'USER': 'my383',
+            'PASSWORD': 'GWAS_Site',
+            'HOST': 'localhost',
+            'PORT': '3306',
+            'OPTIONS':{'charset': 'utf8',}
         },
 }
 
