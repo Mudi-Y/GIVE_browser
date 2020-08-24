@@ -16,6 +16,10 @@ class Track(models.Model):
     def __str__(self):
         return self.track_name
 
+
+    class Meta:
+        app_label = 'browser'
+
 class Coordinates(models.Model):
     coordinates_id = models.AutoField(primary_key=True)
     chromosome = models.CharField(max_length=50)
@@ -26,4 +30,8 @@ class Coordinates(models.Model):
     def __str__(self):
         name = self.track.ip_track_name + " : " + self.chromosome + " : " + self.start + "-" + self.end
         return name
+
+
+    class Meta:
+        app_label = 'browser'
 
