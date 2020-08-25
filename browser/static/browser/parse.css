@@ -321,6 +321,7 @@ div.steps {
 div.step1 {
   background: #f2f3f4;
   padding: 20px;
+  font-size: 18px;
 }
 
 div.step1 ul li {
@@ -335,6 +336,16 @@ div.step2 {
 div.step3 {
   background: #b7cfdc;
   padding: 20px;
+}
+
+div.spe-SNPs {
+  padding: 20px;
+  font-size: 16px;
+}
+
+div.dise-GWAS {
+  padding: 20px;
+  font-size: 16px;
 }
 
 #myBtn,
