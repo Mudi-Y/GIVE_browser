@@ -1,3 +1,45 @@
 {% extends "browser/base.html" %} {% block content %}
-<h1>Find LD SNPs</h1>
+<div class="instruction">
+  <h1>Introduction</h1>
+  <div class="instruction-text">
+    <p>
+      Welcome to Find LD SNPs section. Find LD SNPs section is created for
+      searching linked SNPs based on user specific SNPs or exsiting GWAS. Users
+      can select linked SNPs by setting R² and specific population.
+    </p>
+    <br />
+    <p>
+      * Please notice that the allowed format of upload file is 1-based .bed
+      file.
+    </p>
+  </div>
+</div>
+<div class="user-input">
+  <h1>Input</h1>
+
+  <div class="steps">
+    <form action="" method="post">
+      {% csrf_token %}
+      <div class="step1">
+        <h2>
+          Step1. Use specific SNPs/Search existing GWAS as SNPs
+        </h2>
+        {{ form1.inputWay.label }} {{ form1.inputWay }} {{ form2.as_p}}
+      </div>
+
+      <div class="step2">
+        <h2>
+          Step2. Set R² threshold
+        </h2>
+        {{ form1.r2.errors }}{{ form1.r2.label }}{{ form1.r2 }}
+      </div>
+      <div class="step3">
+        <h2>Step3. Select a population to search</h2>
+        {{ form1.ppl.label }}{{ form1.ppl }}
+      </div>
+      <input id="myBtn3" type="submit" value="Submit" class="myButton" />
+    </form>
+  </div>
+</div>
+
 {% endblock content %}
