@@ -14,7 +14,7 @@ def getIP(request):
 		ip, _ = get_client_ip(request)
 		if ip is None:
 			# Unable to get the client’s IP address
-			return “0.0.0.0”
+			return "0.0.0.0"
 		else:
 			return ip
 
