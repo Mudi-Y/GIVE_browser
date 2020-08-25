@@ -80,25 +80,25 @@ WSGI_APPLICATION = 'newgive.wsgi.application'
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 
 DATABASES = {
-    # 'default': {
-    #         'ENGINE': 'django.db.backends.mysql',
-    #         'NAME': 'gwas',
-    #         'USER': 'my383',
-    #         'PASSWORD': 'GWAS_Site',
-    #         'HOST': 'localhost',
-    #         'PORT': '3306',
-    #         'OPTIONS':{'charset': 'utf8',}
-    #     },
     'default': {},
     'basic':{
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3')
     },
+    # 'gwas': {
+    #         'ENGINE': 'django.db.backends.mysql',
+    #         'NAME': 'gwas',
+    #         'USER': 'root',
+    #         'PASSWORD': 'Ysyhl9t.',
+    #         'HOST': 'localhost',
+    #         'PORT': '3306',
+    #         'OPTIONS':{'charset': 'utf8',}
+    #     },
     'gwas': {
             'ENGINE': 'django.db.backends.mysql',
             'NAME': 'gwas',
-            'USER': 'root',
-            'PASSWORD': 'Ysyhl9t.',
+            'USER': 'my383',
+            'PASSWORD': 'GWAS_Site',
             'HOST': 'localhost',
             'PORT': '3306',
             'OPTIONS':{'charset': 'utf8',}
