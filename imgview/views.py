@@ -6,7 +6,7 @@ import os
 def image(request):
 	IP = getIP(request)
 	file = "/home/people/ss99/gwas/gwaspage/static/data/%sstatic.bed"%IP
-	os.system('./static/static_image.sh %s /home/people/ss99/gwas/gwaspage/static/image/static.png'%IP)
+	os.system('./static/static_image.sh %s /home/people/my383/Projects/PARSE/pygenometracks_plotting/Images/static.png'%IP)
 
 	return render(request,'imgview/image.html',{'title':'Image'})
 
