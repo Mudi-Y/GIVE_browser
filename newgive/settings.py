@@ -33,6 +33,7 @@ ALLOWED_HOSTS = ['sc.gersteinlab.org','*']
 INSTALLED_APPS = [
     'browser.apps.BrowserConfig',
     'gwasdb.apps.GwasdbConfig',
+    'imgview.apps.ImgviewConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
